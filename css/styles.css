@@ -381,6 +381,7 @@ address {
 }
 
 /* Многослойный фон в hero */
+
 .overlay {
   max-width: 1600px;
   height: 600px;
@@ -486,12 +487,8 @@ address {
   fill: #afb1b8;
 }
 
-.hov {
-  fill: currentColor;
-}
-
-.clients-item:hover .clients-link,
-.clients-item:focus .clients-link {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--brand-color);
   border-radius: 4px;
 }
