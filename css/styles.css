@@ -201,9 +201,16 @@ address {
   padding-bottom: 94px;
 }
 
+.section-1 {
+  padding-top: 94px;
+}
+
 .hero {
   display: flex;
   text-align: center;
+}
+
+.hero-container {
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -285,7 +292,7 @@ address {
 }
 
 .team-item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .team-wrap {
@@ -449,12 +456,8 @@ address {
   background-color: var(--brand-color);
 }
 
-.header-icon-link {
-  margin-right: 10px;
-  color: var(--accent-text-color);
-}
-
 .header-icon {
+  margin-right: 10px;
   fill: currentColor;
 }
 
