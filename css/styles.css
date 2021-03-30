@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 :root {
   --brand-color: #2196f3;
   --accent-color: #2f303a;
@@ -277,10 +286,15 @@ address {
 
 .card-set {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--picture-gap));
+  margin-bottom: calc(-1 * var(--picture-gap));
 }
 
-.card-set-item:not(:last-child) {
-  margin-right: 30px;
+.card-set-item {
+  flex-basis: calc((100% - var(--picture-gap) * 3) / 3);
+  margin-right: var(--picture-gap);
+  margin-bottom: var(--picture-gap);
 }
 
 .our-team {
@@ -289,10 +303,15 @@ address {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--picture-gap));
+  margin-bottom: calc(-1 * var(--picture-gap));
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
+.team-item {
+  flex-basis: calc((100% - var(--picture-gap) * 4) / 4);
+  margin-right: var(--picture-gap);
+  margin-bottom: var(--picture-gap);
 }
 
 .team-wrap {
@@ -343,7 +362,7 @@ address {
 
 .picture > .picture-item {
   width: 370px;
-  flex-basis: calc((100% - 90px) / 3);
+  flex-basis: calc((100% - var(--picture-gap) * 3) / 3);
   margin-right: var(--picture-gap);
   margin-bottom: var(--picture-gap);
   border: 1px solid #eeeeee;
@@ -464,26 +483,24 @@ address {
 /* Наши клиенты */
 
 .clients {
-  display: inline-flex;
+  display: flex;
+  margin-right: calc(-1 * var(--picture-gap));
+  margin-bottom: calc(-1 * var(--picture-gap));
 }
 
-.clients-item:not(:last-child) {
-  margin-right: 30px;
+.clients-item {
+  flex-basis: calc((100% - var(--picture-gap) * 6 / 6));
+  margin-right: var(--picture-gap);
+  margin-bottom: var(--picture-gap);
 }
 
 .clients-link {
   display: flex;
+  height: 90px;
   justify-content: center;
   align-items: center;
-  width: 170px;
-  height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-}
-
-.clients-item {
-  display: flex;
-  align-items: flex-start;
 }
 
 .clients-icon {
